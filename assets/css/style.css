@@ -214,6 +214,15 @@
   font-feature-settings: "ss02" on;
   color: #c2c2c2;
 }
+* body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input:-ms-input-placeholder {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  font-feature-settings: "ss02" on;
+  color: #c2c2c2;
+}
 * body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input::placeholder {
   font-family: "Poppins";
   font-style: normal;
@@ -249,7 +258,8 @@
 }
 * body .container .login_page .login_page_inner .login_page_inner_form form a:hover {
   text-decoration: underline;
-  text-decoration-color: #ff5c00;
+  -webkit-text-decoration-color: #ff5c00;
+          text-decoration-color: #ff5c00;
   text-underline-offset: 4px;
 }
 * body .container .login_page .login_page_inner .login_page_inner_form form .error {
@@ -349,6 +359,10 @@
     line-height: 150%;
   }
   * body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input::-moz-placeholder {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input:-ms-input-placeholder {
     font-size: 14px;
     line-height: 150%;
   }
