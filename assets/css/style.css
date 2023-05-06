@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* body .container .first_screen_page {
+  border: inherit;
+  width: 100%;
+  height: 100vh;
+  background: url("../image/Background.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body .container .first_screen_page .first_screen_page_inner {
+  height: 200px;
+  display: flex;
+  min-height: 200px;
+  flex-direction: column;
+  align-content: space-between;
+}
+* body .container .first_screen_page .first_screen_page_inner .first_screen_page_time {
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+* body .container .first_screen_page .first_screen_page_inner .first_screen_page_time .first_screen_page_time_hour {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 275;
+  font-size: 160px;
+  line-height: 75%;
+  text-align: center;
+  font-feature-settings: "ss02" on;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
+}
+* body .container .first_screen_page .first_screen_page_inner .first_screen_page_time .first_screen_page_time_hour span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 275;
+  font-size: 44px;
+  line-height: 100%;
+  text-align: center;
+  font-feature-settings: "ss02" on;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+* body .container .first_screen_page .first_screen_page_inner .first_screen_page_time .first_screen_page_time_date {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  text-align: center;
+  font-feature-settings: "ss02" on;
+  color: #ffffff;
+}
+* body .container .first_screen_page .first_screen_page_inner .first_screen_page_login_btn {
+  border: 1.5px solid #ff5c00;
+  padding: 10px 12px;
+  background-color: #ff5c00;
+  border-radius: 58px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  font-feature-settings: "ss02" on;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 40%;
+  cursor: pointer;
+  transition: all 0.4s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  text-decoration: none;
+}
+* body .container .first_screen_page .first_screen_page_inner .first_screen_page_login_btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+@media screen and (max-width: 768px) {
+  * body .container .first_screen_page .first_screen_page_inner .first_screen_page_time .first_screen_page_time_hour {
+    font-size: 72px;
+    line-height: 75%;
+    text-align: center;
+    justify-content: center;
+  }
+  * body .container .first_screen_page .first_screen_page_inner .first_screen_page_time .first_screen_page_time_hour span {
+    font-size: 24px;
+    line-height: 100%;
+  }
+  * body .container .first_screen_page .first_screen_page_inner .first_screen_page_time .first_screen_page_time_date {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  * body .container .first_screen_page .first_screen_page_inner .first_screen_page_login_btn {
+    font-size: 14px;
+    line-height: 150%;
+    padding: 8px 10px;
+    margin-top: 50%;
+  }
+}
+* body .container .login_page {
+  width: 100%;
+  height: 100vh;
+  background: url("../image/background_login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 44px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+* body .container .login_page .login_page_inner {
+  max-height: 700px;
+  max-width: 620px;
+  width: min(620px, 100%);
+  padding: 44px 80px;
+  background: #ffffff;
+  box-shadow: 0px 24px 64px -16px rgba(25, 25, 28, 0.08);
+  border-radius: 16px;
+}
+* body .container .login_page .login_page_inner .login_page_inner_logo {
+  width: 151px;
+  height: 58px;
+  margin: auto;
+}
+* body .container .login_page .login_page_inner .login_page_inner_logo img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form {
+  margin-top: 10%;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form h1 {
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+  font-feature-settings: "ss02" on;
+  color: #19191c;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  font-feature-settings: "ss02" on;
+  color: #828487;
+  text-align: center;
+  margin-top: 16px;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form {
+  margin-top: 32px;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  font-feature-settings: "ss02" on;
+  color: #828487;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form label .input_box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
+  border-radius: 58px;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  font-feature-settings: "ss02" on;
+  color: #19191c;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input::-moz-placeholder {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  font-feature-settings: "ss02" on;
+  color: #c2c2c2;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input::placeholder {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  font-feature-settings: "ss02" on;
+  color: #c2c2c2;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form label .input_box span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form label:nth-of-type(2) {
+  margin-top: 20px;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form label:nth-of-type(3) {
+  margin-top: 20px;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form a {
+  text-decoration: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  font-feature-settings: "ss02" on;
+  color: #ff5c00;
+  margin-top: 20px;
+  display: inline-block;
+  transition: all 0.4s;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form a:hover {
+  text-decoration: underline;
+  text-decoration-color: #ff5c00;
+  text-underline-offset: 4px;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form .error {
+  display: inline-block;
+  margin-top: 5px;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 80%;
+  font-feature-settings: "ss02" on;
+  color: #ff5c00;
+  opacity: 0;
+  transition: all 0.4s;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form .showError {
+  opacity: 1;
+  transition: all 0.4s;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form i {
+  cursor: pointer;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form input[type=submit] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  width: 100%;
+  font-size: 16px;
+  line-height: 150%;
+  font-feature-settings: "ss02" on;
+  color: #ffffff;
+  padding: 12px 163px;
+  background: #ff5c00;
+  border: 1px solid #ff5c00;
+  border-radius: 58px;
+  margin-top: 32px;
+  transition: all 0.4s;
+}
+* body .container .login_page .login_page_inner .login_page_inner_form form input[type=submit]:hover {
+  background-color: transparent;
+  color: #ff5c00;
+}
+* body .container .login_page .login_page_inner .login_page_inner_title a {
+  display: block;
+  margin: auto;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  font-feature-settings: "ss02" on;
+  color: #828487;
+  margin-top: 4%;
+}
+@media screen and (max-width: 600px) {
+  * body .container .login_page {
+    padding: 24px;
+  }
+  * body .container .login_page .login_page_inner {
+    padding: 24px 40px;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_logo {
+    width: 100px;
+    height: 35px;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form {
+    margin-top: 10%;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form h1 {
+    font-size: 24px;
+    line-height: 120%;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form p {
+    font-size: 14px;
+    line-height: 120%;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form form {
+    margin-top: 25px;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form form label {
+    font-size: 11px;
+    line-height: 140%;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form form label .input_box {
+    padding: 10px 14px;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input::-moz-placeholder {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input::placeholder {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form form label .input_box span svg {
+    width: 18px;
+    height: 18px;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form form a {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 120%;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_form form input[type=submit] {
+    margin-top: 22px;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 140%;
+  }
+  * body .container .login_page .login_page_inner .login_page_inner_title a {
+    font-size: 14px;
+    line-height: 140%;
+    margin-top: 8%;
+  }
+}/*# sourceMappingURL=style.css.map */
