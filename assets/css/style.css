@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+* body .container {
+  border: 2px solid red;
+}
 * body .container .first_screen_page {
   border: inherit;
   width: 100%;
@@ -214,15 +217,6 @@
   font-feature-settings: "ss02" on;
   color: #c2c2c2;
 }
-* body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input:-ms-input-placeholder {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  font-feature-settings: "ss02" on;
-  color: #c2c2c2;
-}
 * body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input::placeholder {
   font-family: "Poppins";
   font-style: normal;
@@ -258,8 +252,7 @@
 }
 * body .container .login_page .login_page_inner .login_page_inner_form form a:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #ff5c00;
-          text-decoration-color: #ff5c00;
+  text-decoration-color: #ff5c00;
   text-underline-offset: 4px;
 }
 * body .container .login_page .login_page_inner .login_page_inner_form form .error {
@@ -362,10 +355,6 @@
     font-size: 14px;
     line-height: 150%;
   }
-  * body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input:-ms-input-placeholder {
-    font-size: 14px;
-    line-height: 150%;
-  }
   * body .container .login_page .login_page_inner .login_page_inner_form form label .input_box input::placeholder {
     font-size: 14px;
     line-height: 150%;
@@ -399,10 +388,17 @@
   display: flex;
   justify-content: space-between;
   padding: 0 112px;
+  align-items: center;
 }
 * body .container .main_page header .header_logo {
+  margin-top: 16px;
   gap: 28px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body .container .main_page header .header_logo .header_logo_img {
+  cursor: pointer;
 }
 * body .container .main_page header .header_logo .header_logo_text h3 {
   font-family: "Poppins";
@@ -423,8 +419,19 @@
   color: #828487;
   margin-top: 2px;
 }
+* body .container .main_page header .header_profil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+* body .container .main_page header .header_profil nav {
+  margin-top: 27px;
+}
 * body .container .main_page header .header_profil nav ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 36px;
 }
 * body .container .main_page header .header_profil nav ul li {
@@ -445,9 +452,70 @@
   gap: 11px;
   transition: all 0.4s;
 }
+* body .container .main_page header .header_profil nav ul li a span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 * body .container .main_page header .header_profil nav ul li a:hover {
-  color: #FF5C00;
+  transition: all 0.4s;
+  color: #ff5c00;
 }
 * body .container .main_page header .header_profil nav ul li a:hover span svg path {
+  transition: all 0.1s;
+  stroke: #ff5c00;
   fill: #ff5c00;
+}
+* body .container .main_page header .header_profil .header_profil_options {
+  margin-top: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+* body .container .main_page header .header_profil .header_profil_options p:first-of-type {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  font-feature-settings: "ss02" on;
+  color: #ff5c00;
+  padding: 8px 19px;
+  background: #fff5ee;
+  border: 1px solid #fff5ee;
+  border-radius: 58px;
+}
+* body .container .main_page header .header_profil .header_profil_options p:last-of-type {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  font-feature-settings: "ss02" on;
+  color: #19191c;
+  background: #f8f9fd;
+  border: 1px solid #f8f9fd;
+  border-radius: 40px;
+  padding: 8px 20px;
+}
+* body .container .main_page header .header_profil .header_profil_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17px;
+  cursor: pointer;
+}
+* body .container .main_page main {
+  display: flex;
+}
+* body .container .main_page main aside a {
+  text-decoration: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 116%;
+  display: block;
+  color: #828487;
 }/*# sourceMappingURL=style.css.map */
