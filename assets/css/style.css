@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+* body .container {
+  border: 2px solid red;
+}
 * body .container .first_screen_page {
   border: inherit;
   width: 100%;
