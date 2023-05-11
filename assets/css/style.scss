@@ -374,13 +374,14 @@
       .main_page {
         background: #f8f9fd;
         width: 100%;
+        height: 100vh;
         header {
           background: #ffffff;
           border-bottom: 1px solid #e4e4e4;
           width: 100%;
           display: flex;
           justify-content: space-between;
-          padding: 0 112px;
+          padding: 0 24px 0 112px;
           align-items: center;
           padding-bottom: 16px;
           .header_logo {
@@ -428,6 +429,7 @@
                 gap: 36px;
                 li {
                   list-style-type: none;
+
                   a {
                     text-decoration: none;
                     font-family: "Poppins";
@@ -442,20 +444,50 @@
                     align-items: center;
                     gap: 11px;
                     transition: all 0.4s;
+
                     span {
                       display: flex;
                       justify-content: center;
                       align-items: center;
+                      svg {
+                        transition: all 0.4s;
+                        path {
+                          transition: all 0.4s;
+                        }
+                        circle {
+                          transition: all 0.4s;
+                        }
+                      }
                     }
                     &:hover {
-                      transition: all 0.4s;
                       color: #ff5c00;
                       span {
                         svg {
                           path {
-                            transition: all 0.1s;
                             stroke: #ff5c00;
-                            fill: #ff5c00;
+                          }
+                          circle {
+                            stroke: #ff5c00;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  &:first-of-type {
+                    a {
+                      color: #ff5c00;
+                    }
+                  }
+                  &:not(:first-of-type):hover {
+                    a {
+                      color: #ff5c00;
+                      span {
+                        svg {
+                          path {
+                            stroke: #ff5c00;
+                          }
+                          circle {
+                            stroke: #ff5c00;
                           }
                         }
                       }
@@ -510,30 +542,45 @@
         }
         main {
           display: flex;
+          width: 100%;
           aside {
-            padding: 0 30px;
+            padding: 24px;
+            width: 125px;
             max-width: 125px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
             color: #ffffff;
             background: #ffffff;
             border-right: 1px solid #e4e4e4;
             a {
-              margin-top: 24px;
+              width: 100%;
               text-decoration: none;
               font-family: "Poppins";
               font-style: normal;
               font-weight: 500;
               font-size: 12px;
               line-height: 116%;
-              display: block;
               color: #828487;
               display: flex;
               flex-direction: column;
               justify-content: center;
               align-items: center;
-              padding: 8px 8px;
+              padding: 12px 6px;
               background-color: #ffffff;
               border-radius: 8px;
-              transition: all 0.1s;
+              transition: all 0.4s;
+              span {
+                svg {
+                  path {
+                    fill {
+                      transition: all 0.4s;
+                    }
+                  }
+                }
+              }
               &:hover {
                 background: linear-gradient(
                   218.57deg,
@@ -542,9 +589,9 @@
                 );
                 color: #ffffff;
                 border-radius: 8px;
-                span{
-                  svg{
-                    path{
+                span {
+                  svg {
+                    path {
                       fill: #ffffff;
                     }
                   }
@@ -570,8 +617,8 @@
             }
           }
           section {
+            width: 100%;
             .section_pages {
-              min-width: 955px;
               background: #ffffff;
               border-bottom: 1px solid #e4e4e4;
               padding: 8px 0 8px 16px;
@@ -592,7 +639,8 @@
               background: #ffffff;
               border-bottom: 1px solid #e4e4e4;
               display: flex;
-              gap: 120px;
+              justify-content: space-between;
+              align-items: center;
               .section_options_search {
                 form {
                   label {
@@ -620,6 +668,7 @@
                 justify-content: center;
                 align-items: center;
                 gap: 8px;
+                padding-right: 24px;
                 .section_options_badge_item {
                   font-family: "Poppins";
                   font-style: normal;
@@ -634,6 +683,12 @@
                   padding: 8px 16px;
                   transition: all 0.4s;
                   cursor: pointer;
+                  &:nth-of-type(1) {
+                    color: #ff5c00;
+                    background: #fff5ee;
+                    border: 1px solid #ff5c00;
+                    border-radius: 40px;
+                  }
                   &:hover {
                     color: #ff5c00;
                     background: #fff5ee;
@@ -648,8 +703,12 @@
                   font-size: 14px;
                   line-height: 140%;
                   font-feature-settings: "ss02" on;
-                  color: #19191c;
-                  background: #ffffff;
+                  color: #fff;
+                  background: linear-gradient(
+                    218.57deg,
+                    #ffab18 -6.67%,
+                    #ff2197 137.69%
+                  );
                   border: 1px solid #e4e4e4;
                   border-radius: 40px;
                   padding: 8px 16px;
@@ -711,6 +770,8 @@
           }
         }
         .modal {
+          transition: all 0.4s;
+          scale: 0;
           max-width: 360px;
           background: #ffffff;
           border-radius: 10px;
@@ -736,16 +797,25 @@
                 padding-left: 18px;
                 padding-bottom: 9px;
               }
-              span {
-                cursor: pointer;
+              .modal_top_title_remove {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 18px;
+                border-radius: 5px;
+                span {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  cursor: pointer;
+                  transition: all 0.4s;
+                }
                 transition: all 0.4s;
-                padding-top: 9px;
-                padding-right: 18px;
-                padding-bottom: 9px;
                 &:hover {
+                  background-color: red;
                   svg {
                     path {
-                      stroke: red;
+                      stroke: #ffffff;
                     }
                   }
                 }
@@ -786,11 +856,12 @@
                   font-size: 16px;
                   line-height: 150%;
                   font-feature-settings: "ss02" on;
-                  color: #c2c2c2;
+                  color: #19191c;
                   padding: 12px 16px;
                   background: #ffffff;
                   border: 1px solid #e4e4e4;
                   border-radius: 58px;
+                  outline: none;
                 }
                 #submit {
                   font-family: "Poppins";
@@ -815,6 +886,14 @@
             }
           }
         }
+        .opacity {
+          transition: all 0.4s;
+          scale: 1;
+        }
+      }
+      @media screen and (min-width: 1440px) {
+        width: 1440px;
+        margin: auto;
       }
     }
   }
