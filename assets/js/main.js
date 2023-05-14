@@ -8,6 +8,7 @@ const clock = document.querySelector(".hour");
 const sectionMain = document.querySelector(".section_row_main");
 const error = document.querySelector(".error");
 const scale = document.querySelector(".scale");
+let inp = document.querySelector("input[type=file]");
 
 function clickFunction() {
   modal.classList.add("scale");
@@ -28,6 +29,18 @@ function setTodos() {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
+inp.addEventListener("change", () => {
+  let inputImage = document.querySelector("input[type=file]").files[0];
+  const filereader = new FileReader();
+  filereader.readAsDataURL(inputImage);
+
+  filereader.addEventListener("load", function () {
+    let filevalue = this.result;
+    const form = document.querySelector("form");
+    fileDocument = filevalue;
+  });
+});
+
 function ShowError(e) {
   return (error.innerHTML = e);
 }
@@ -38,7 +51,7 @@ function GetValue() {
     sectionMain.innerHTML += ` <div class="section_row" key="${index}">
     <div class="section_row_col">
       <div class="section_row_col_img">
-        <img src="../assets/image/section_row_col_img.png" alt="" />
+        <img src="${element.productImg}" alt="" />
       </div>
     </div>
     <div class="section_row_col_title">
@@ -75,9 +88,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   let value = e.target.productPrice.value.trim();
   let value2 = e.target.productName.value.trim();
-  if (value.length <= 0 && value2.length <= 0) {
-    // error.classList.add("showError");
-    // error.innerHTML = "Please, fill in the information!";
+  if ((value.length <= 0 && value2.length <= 0) || fileDocument == undefined) {
     ShowError("Please, fill in the information!");
     e.target.reset();
     setTimeout(() => {
@@ -110,10 +121,15 @@ form.addEventListener("submit", (e) => {
     setTimeout(() => {
       ShowError("");
     }, 3000);
-  } else if (value2.length >= 0 && value.length >= 0) {
+  } else if (
+    value2.length >= 0 &&
+    value.length >= 0 &&
+    fileDocument !== undefined
+  ) {
     todos.push({
       productName: value2,
       productPrice: value,
+      productImg: fileDocument,
     });
     localStorage.setItem("todos", JSON.stringify(todos));
     GetValue();
